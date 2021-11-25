@@ -1,4 +1,3 @@
-const route = require("color-convert/route");
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -10,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1/social-network",
+  process.env.MONGODB_URI || "mongodb://localhost/social-network",
   {
     // useFindAndModify: false,
     useNewUrlParser: true,
