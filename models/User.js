@@ -31,10 +31,10 @@ const UserSchema = new Schema(
       required: true,
       unique: true,
     },
-    // thoughts: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: "Thought",
-    // },
+    thoughts: {
+      type: Schema.Types.ObjectId,
+      ref: "Thought",
+    },
     friends: [FriendSchema],
   },
   {
