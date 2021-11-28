@@ -30,7 +30,6 @@ const thoughtController = {
           { new: true }
         );
       })
-      .select("-__v")
       .then((dbThoughtData) => {
         console.log(dbThoughtData);
         if (!dbThoughtData) {
@@ -47,7 +46,6 @@ const thoughtController = {
       new: true,
       runValidators: true,
     })
-    .select("-__v")
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
           res.status(404).json({ message: "No thought found with this id!" });
@@ -70,7 +68,6 @@ const thoughtController = {
       { $push: { reactions: body } },
       { new: true }
     )
-      .select("-__v")
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
           res.status(404).json({ message: "No thought found with this id!" });
